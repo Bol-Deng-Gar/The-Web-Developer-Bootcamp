@@ -15,64 +15,50 @@ const reset = {
 }
 
 const selectElement = document.querySelector("#number-select")
-let score = document.querySelector("#score")
 let amountOfRounds = parseInt(selectElement.value, 10);
+let isGamerOver = false;
 
 selectElement.addEventListener("change", () => {
   amountOfRounds = parseInt(selectElement.value, 10);
 });
 
 function updateScores(player) {
-  player.score += 1
-  player.player.textContent = player.score
-  checkForWinner();
+  if (!isGamerOver) {
+    player.score += 1
+    player.player.textContent = player.score
+    checkForWinner();
+  }
 }
 
 p1.button.addEventListener("click", () => updateScores(p1, p2));
 p2.button.addEventListener("click", () => updateScores(p2, p1));
 
 reset.button.addEventListener("click", () => {
-  p1.score = 0;
-  p2.score = 0;
-  p1.player.textContent = p1.score
-  p2.player.textContent = p2.score
-  p1.player.style.color = "black"
-  p2.player.style.color = "black"
-  p1.button.style.color = "white";
-  p2.button.style.color = "white";
-  p1.button.classList.remove('disabled-button');
-  p2.button.classList.remove('disabled-button');
+  isGamerOver = false;
+  [p1, p2].forEach(player => {
+    player.score = 0;
+    player.player.textContent = player.score;
+    player.player.style.color = "black";
+    player.button.style.color = "white";
+    player.button.classList.remove("disabled-button")
+
+  })
 })
 
 function checkForWinner() {
   if (p1.score === amountOfRounds) {
-    p1.button.style.color = "white";
-    p2.button.style.color = "white";
-    p1Wins();
+    playerWins(p1, p2);
   } else if (p2.score === amountOfRounds) {
-    p1.button.style.color = "white";
-    p2.button.style.color = "white";
-    p2Wins();
+    playerWins(p1, p2);
   }
 }
 
-
-function p1Wins() {
-  p1.player.style.color = "green"
-  p2.player.style.color = "red"
-  p1.button.style.color = "rgba(67, 232, 130, 0.860)"
-  p2.button.style.color = "rgba(59, 85, 255, 0.860)"
-  p1.button.classList.add('disabled-button');
-  p2.button.classList.add('disabled-button');
-  p1.button.style.color = "white";
-  p2.button.style.color = "white";
-}
-
-function p2Wins() {
-  p1.player.style.color = "red"
-  p2.player.style.color = "green"
-  p1.button.style.backgroundColor = "rgba(67, 232, 130, 0.860)"
-  p2.button.style.backgroundColor = "rgba(59, 85, 255, 0.860)"
+function playerWins(winner, loser) {
+  isGamerOver = true;
+  winner.player.style.color = "green";
+  loser.player.style.color = "red"
+  winner.button.style.color = "rgba(67, 232, 130, 0.860)"
+  loser.button.style.color = "rgba(59, 85, 255, 0.860)"
   p1.button.classList.add('disabled-button');
   p2.button.classList.add('disabled-button');
   p1.button.style.color = "white";
