@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Tables</title>
+</head>
+
+<body>
+    <h2>More Inputs</h2>
+    <form action="birds">
+        <input type="checkbox" name="agree_tos" id="agree" checked>
+        <label for="agree">I agree to this</label>
+        <p>
+            <label for="small">small</label>
+            <input type="radio" name="weight" id="small" value="small">
+            <label for="medium">medium</label>
+            <input type="radio" name="weight" id="medium" value="medium">
+            <label for="heavy">heavy</label>
+            <input type="radio" name="weight" id="heavy" value="heavy">
+        </p>
+        <p>
+            <select name="games" id="game-select">
+                <option>--Please choose an option--</option>
+                <option value="Red Dead Redemption 2">Red Dead Redemption 2</option>
+                <option value="God of War">God of War</option>
+                <option value="Spiderman PS4">Spiderman PS4</option>
+                <option value="Ghost Recon Wildlands">Ghost Recon Wildlands</option>
+            </select>
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <h3>Checkbox</h3>
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree" checked>
+        <label for="agree">I agree to everything</label>
+        <button>Submit</button>
+    </form>
+
+    <h3>Range</h3>
+    <input type="range" id="skill" value="3" min="1" max="10" name="skill_level">
+    <label for="skill">Amount of skill</label>
+    <button>Submit</button>
+
+    <h3>Text Area (not an input)</h3>
+    <p>
+        <label for="">Any Special Requests?</label>
+    </p>
+    <textarea id="requests" rows="10" cols="40" placeholder="Insert Request"></textarea>
+    <button type="submit">Submit</button>
+
+    <h3>Validations</h3>
+    <form action="/deep work">
+        <label for="Hero">Entor your Heros name</label>
+        <input type="text" name="Hero Name" id="Hero" required>
+        <textarea required rows="10" cols="40" placeholder="write about your hero" maxlength="50">
+    </textarea>
+        <button>Submit Name</button>
+    </form>
+
+    <h3>Race Registration!</h3>
+    <form>
+        <div>
+            <label for="first-name">First Name</label>
+            <input type="text" required>
+            <label for="last-name" required>Last Name</label>
+            <input type="text">
+        </div>
+        <div>
+            <p>Select a race:</p>
+            <div>
+                <input type="radio" name="lenght" id="short" value="short">
+                <label for="short">Fun Run 5k</label>
+            </div>
+            <div>
+                <input type="radio" name="lenght" id="longer" value="longer">
+                <label for="longer">Half Marathon</label>
+            </div>
+            <div>
+                <input type="radio" name="lenght" id="longest" value="longest">
+                <label for="longest">Full Marathon</label>
+            </div>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" required>
+            <label for="password" required>Password</label>
+            <input type="password">
+        </div>
+        <div>
+            <select name="age" id="age select">
+                <option>Select Age Group:</option>
+                <option value="under 18">under 18</option>
+                <option value="18-30">18-30</option>
+                <option value="30-50">30-50</option>
+                <option value="30-50">30-50</option>
+                <option value="50+">50+</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</body>
+
+</html>

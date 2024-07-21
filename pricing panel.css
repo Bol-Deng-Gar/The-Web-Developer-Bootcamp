@@ -1,0 +1,144 @@
+body {
+    background-color: rgb(48, 143, 221);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+html {
+    font-family: sans-serif;
+
+}
+
+main {
+    margin: 50px;
+    background-color: white;
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1400px;
+    max-width: 1000px;
+    justify-content: space-around;
+    border-radius: 8px;
+    height: auto;
+    height: 650px;
+    padding: 20px;
+    padding-top: 40px;
+    margin-top: 0;
+}
+
+section {
+    border-width: 10px;
+    text-align: center;
+    width: 180px;
+    height: auto;
+    font-family: arial;
+
+}
+
+#regular {
+    width: 230px;
+}
+
+#budget {
+    width: 200px;
+}
+
+p {
+    text-transform: uppercase;
+    color: rgb(48, 117, 221);
+    font-weight: 700;
+    border-top: 1px solid black;
+
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+section #type {
+    font-size: 1.2em;
+    color: grey;
+    border-top: none;
+    padding-bottom: 40px;
+}
+
+section #quote {
+    font-size: 1em;
+    margin: 10px;
+    padding-top: 20px;
+
+}
+
+section #info {
+    font-size: 1em;
+    padding-top: 20px;
+
+}
+
+
+section #price {
+    color: rgb(0, 64, 240);
+    font-size: 2em;
+    padding-top: 40px;
+}
+
+button {
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background-color: white;
+    border-color: rgb(48, 143, 221);
+    border: solid;
+    color: rgb(48, 143, 221);
+    border-width: 1px;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: rgb(211, 235, 255);
+}
+
+#type2 {
+    color: white;
+    background-color: rgb(48, 143, 221);
+    border-color: white;
+}
+
+#type2:hover {
+    background-color: rgb(41, 120, 184);
+
+}
+
+
+@media (max-width: 767px) {
+    main {
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-flow: column;
+        height: 900px;
+        justify-content: flex-start;
+        margin-top: 50px;
+        background-color: white;
+        margin-bottom: 50px;
+        align-items: space-between;
+        align-content: space-between;
+
+    }
+
+    body {
+        background-color: white;
+    }
+
+    #budget {
+        margin-top: 100px;
+    }
+
+}

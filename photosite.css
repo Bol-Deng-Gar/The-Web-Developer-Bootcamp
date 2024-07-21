@@ -1,0 +1,17 @@
+.image-container img {
+    width: 32%;
+    height: 1000px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+nav {
+    text-transform: uppercase;
+    border-bottom: 2px solid lightgrey;
+    width: 95%;
+    padding: 40px;
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-family: "Raleway", sans-serif;
+
+}

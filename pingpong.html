@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="pingpong.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <img
+      src="https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=1799&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <p id="score-keeper">Ping Pong Score Keeper</p>
+    <div id="info">
+      <p id="score"><span id="player-one">0</span> to <span id="player-two">0</span></p>
+      <p id="info-text">Use the buttons below to keep score.</p>
+      <div id="round-selector">
+        <label for="number-select">Playing To :</label>
+        <select id="number-select" name="numbers">
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+    </div>
+    <div id="button-container">
+      <button id="button-1">+1 Player One</button>
+      <button id="button-2">+1 Player Two</button>
+      <button id="button-3">Reset</button>
+    </div>
+  </div>
+
+  <script src="pingpong.js"></script>
+</body>
+
+</html>
