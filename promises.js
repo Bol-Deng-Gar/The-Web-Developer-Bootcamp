@@ -43,19 +43,53 @@
 //   })
 // })
 
-const delayedColorChange = (color, delay) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      document.body.style.backgroundColor = color;
-      resolve();
-    }, delay);
-  })
+// const delayedColorChange = (color, delay) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       document.body.style.backgroundColor = color;
+//       resolve();
+//     }, delay);
+//   })
+// }
+
+// delayedColorChange("red", 1000)
+//   .then(() => delayedColorChange("orange", 1000))
+//   .then(() => delayedColorChange("yellow", 1000))
+//   .then(() => delayedColorChange("green", 1000))
+//   .then(() => delayedColorChange("blue", 1000))
+//   .then(() => delayedColorChange("indigo", 1000))
+//   .then(() => delayedColorChange("violet", 1000))
+
+
+async function hello() {
+
 }
 
-delayedColorChange("red", 1000)
-  .then(() => delayedColorChange("orange", 1000))
-  .then(() => delayedColorChange("yellow", 1000))
-  .then(() => delayedColorChange("green", 1000))
-  .then(() => delayedColorChange("blue", 1000))
-  .then(() => delayedColorChange("indigo", 1000))
-  .then(() => delayedColorChange("violet", 1000))
+const sing = async () => {
+  return "LA LA LA LA "
+}
+
+sing()
+  .then((data) => {
+    console.log("Promise resolved with:", data)
+  })
+  .catch(err => {
+    console.log("Error")
+    console.log(err)
+  })
+
+const login = async (username, password) => {
+  if (!username || !password) throw "Missing Credentials"
+  if (password === "apple") return "Welscome!"
+  throw "Invalid Password"
+}
+
+login("username", "orange")
+  .then(msg => {
+    console.log("Logged In")
+    console.log(msg)
+  })
+  .catch(err => {
+    console.log("ERROR!")
+    console.log(err)
+  })
