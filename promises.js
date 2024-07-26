@@ -70,6 +70,13 @@ async function rainbow() {
   await delayedColorChange("violet", 1000)
 }
 
+// rainbod().then(() => console.log("END OF RAINBOW"))
+
+async function printRainbow() {
+  await rainbow();
+  console.log("END OF RAINBOW!")
+}
+
 // async function hello() {
 
 // }
